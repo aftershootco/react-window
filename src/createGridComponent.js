@@ -663,14 +663,8 @@ export default function createGridComponent({
 
       // Overscan by one item in each direction so that tab/focus works.
       // If there isn't at least one extra item, tab loops back around.
-      const overscanBackward =
-        !isScrolling || horizontalScrollDirection === 'backward'
-          ? Math.max(1, overscanCountResolved)
-          : 1;
-      const overscanForward =
-        !isScrolling || horizontalScrollDirection === 'forward'
-          ? Math.max(1, overscanCountResolved)
-          : 1;
+      const overscanBackward = Math.max(1, overscanCountResolved)
+      const overscanForward = Math.max(1, overscanCountResolved)
 
       return [
         Math.max(0, startIndex - overscanBackward),
@@ -711,14 +705,8 @@ export default function createGridComponent({
 
       // Overscan by one item in each direction so that tab/focus works.
       // If there isn't at least one extra item, tab loops back around.
-      const overscanBackward =
-        !isScrolling || verticalScrollDirection === 'backward'
-          ? Math.max(1, overscanCountResolved)
-          : 1;
-      const overscanForward =
-        !isScrolling || verticalScrollDirection === 'forward'
-          ? Math.max(1, overscanCountResolved)
-          : 1;
+      const overscanBackward = Math.max(1, overscanCountResolved)
+      const overscanForward = Math.max(1, overscanCountResolved)
 
       return [
         Math.max(0, startIndex - overscanBackward),
